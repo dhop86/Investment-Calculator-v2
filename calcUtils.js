@@ -25,7 +25,7 @@ let submit = function(){
     $('totalInterestEarned').value = values[2].toFixed(2);
 };
 
-// Collect form data, create a new investment opject, call the calculator function
+// Collect form data, create a new investment object, call investment.calculator()
 let captureFormData = () => {
     let startingInvestment = parseFloat($('startingInvestment').value);
     let yearsToGrow = parseFloat($('yearsToGrow').value);
@@ -68,7 +68,7 @@ let reset = function(){
     startingFocus();
 };
 
-// Delete rows from the table. Called from reset & submit
+// Delete rows from the table. Called from reset() & submit()
 let deleteTableRows = function(){
     const elements = document.getElementsByClassName("addedRow");
     while(elements.length > 0){
