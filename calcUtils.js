@@ -16,7 +16,7 @@ let startingFocus = function (){
     $('startingInvestment').focus();
 };
 
-// Subnit the form and call the calculation function
+// onclick of Submit, call captureFormData()
 let submit = function(){
     deleteTableRows();
     let values = captureFormData();
@@ -55,7 +55,7 @@ let addRow = function(year, totalInvestment, priciple, interest){
     table.appendChild(tr);
 };
 
-// Reset the form & table
+// onclick of Reset, return the form to the default state
 let reset = function(){
     $('startingInvestment').value = '';
     $('yearsToGrow').value = '';
