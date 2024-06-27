@@ -1,3 +1,5 @@
+"use strict";
+
 class Investment {
     constructor(initialAmount, years, monthlyContrib, interestRate) {
         this.initialAmount = initialAmount;
