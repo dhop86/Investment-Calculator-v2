@@ -67,17 +67,22 @@ let captureFormData = () => {
 
 // Add a row to the table
 let addRow = function(year, totalInvestment, priciple, interest){
+    let values = [year, totalInvestment, priciple, interest];
+    for (let i = 0; i < values.length;) {
+        values[i] = values[i].toFixed(2);
+        i++;
+    }
     let table = $('tableData');
     let tr = document.createElement("tr");
     tr.className = "addedRow";
     let td_Year = document.createElement("td");
-    td_Year.innerHTML = "Year " + year;
+    td_Year.innerHTML = "Year " + values[0];
     let td_TotalInvestment = document.createElement("td");
-    td_TotalInvestment.innerHTML = "$" + totalInvestment.toFixed(2);
+    td_TotalInvestment.innerHTML = "$" + values[1];
     let td_Priciple = document.createElement("td");
-    td_Priciple.innerHTML = "$" + priciple.toFixed(2);
+    td_Priciple.innerHTML = "$" + values[2];
     let td_Interest = document.createElement("td");
-    td_Interest.innerHTML = "$" + interest.toFixed(2);
+    td_Interest.innerHTML = "$" + values[3];
     tr.appendChild(td_Year);
     tr.appendChild(td_Priciple);
     tr.appendChild(td_Interest);
